@@ -12,6 +12,8 @@ function GetAppController() as object
         end sub
 
         prototype.init = sub()
+            ' Initialize task for transactions
+            GetTransactionPool().init()
             ' Redirect to Home View
             NavigationChangeCommand().executeController("HOME")
         end sub

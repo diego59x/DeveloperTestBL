@@ -19,7 +19,7 @@ function DataModel() as object
 
             m._DataService = DataService()
             m._DataService.addEventListener(m._DataService.LOAD_SUCCESS, "_loadStorefrontContentSuccessful", m)
-            m._DataService.addEventListener(m._DataService.LOAD_SERVICE_FAIL, "_loadStorefrontContentFailed", m)
+            m._DataService.addEventListener(m._DataService.LOAD_NETWORK_FAIL, "_loadStorefrontContentFailed", m)
             m._DataService.addEventListener(m._DataService.LOAD_SERVICE_FAIL, "_loadStorefrontContentFailed", m)
 
             m._DataService.requestDataHomeService()
@@ -36,10 +36,12 @@ function DataModel() as object
 
         prototype._loadStorefrontContentSuccessful = function(request as dynamic) as void
             m._removeEventListeners()
+            req = request.getResponse()
+
             data = ParseJson(request.getResponse().data)
             m._homeData = []
 
-            if (data.header.code = 0)
+            if (req.code = 200)
                 ' Parse data
             else
                 m.dispatchEvent(m.STOREFRONT_CONTENT_FAILED, data.header)

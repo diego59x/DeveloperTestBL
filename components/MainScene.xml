@@ -35,6 +35,9 @@
     
     <!--===== utils  =====-->
     <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/Transactions/TransactionPool.brs" />
+    <script type="text/brightscript" uri="pkg:/source/Transactions/TransactionService.brs" />
+    <script type="text/brightscript" uri="pkg:/source/Transactions/HttpsTransaction.brs" />
 
     <children>
         <Group id="MainView"></Group>
