@@ -1,0 +1,14 @@
+output/roku-deploy.zip
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/4.10.2/taskHistory/taskHistory.lock
+.gradle/4.10.2/taskHistory/taskHistory.bin
+.gradle/4.10.2/fileHashes/fileHashes.lock
+.gradle/4.10.2/fileHashes/fileHashes.bin
+.gradle/buildOutputCleanup/cache.properties
+out/
+.vscode/
+
+images/.DS_Store
+components/Login/.DS_Store
+components/.DS_Store
+.DS_Store
