@@ -6,7 +6,6 @@ sub init()
 end sub
 
 sub onContentUpdate()
-    print "Data", m.top.content
     m.carouselD.content =  m.top.content
 end sub
 

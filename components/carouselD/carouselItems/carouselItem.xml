@@ -6,27 +6,40 @@
     <field id="content" type="assocarray" alwaysNotify="true" onChange="onContentUpdate" />
   </interface>
 
-  <script type="text/brightscript" uri="pkg:/components/carouselD/carouselItems/carouselItems.brs" />
+  <script type="text/brightscript" uri="pkg:/components/carouselD/carouselItems/carouselItem.brs" />
 
   <children>
         <Group id="itemContainer">
             <Rectangle 
                 id="background"
+                translation = "[0, 0]"
+                width = "720"
+                height = "270"
+                color = "#000000"
             />
             <poster 
                 id="focusImage"
             />
+            <!-- Images of 4x3 480, 360-->
             <poster 
                 id="imageThumb"
+                width="360"
+                height="270"
             />
             <Label 
                 id="itemTitle"
+                translation = "[370, 0]"
             />
             <Label 
                 id="subtitleItem"
+                translation = "[370, 50]"
             />
             <Label 
                 id="descriptionItem"
+                width="300"
+                height="90"
+                wrap="true"
+                translation = "[370, 100]"
             />
       </Group>
   </children>

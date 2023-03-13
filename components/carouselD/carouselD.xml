@@ -11,8 +11,13 @@
   <children>
         <Label 
             id="carouselTitle"
+            font="font:MediumBoldSystemFont"
+            translation="[10,200]"
         />
-        <Group id="carouselContainer">
+        <Group 
+          id="carouselContainer"
+          translation="[20,230]"
+          >
         <!-- Here to append all carouselItems -->
 
         </Group>
