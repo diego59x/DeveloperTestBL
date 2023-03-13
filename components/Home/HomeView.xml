@@ -17,6 +17,10 @@
           height = "1080"
           color = "0x0C1021"/>
 
+      <carouselD 
+        id="carouselD"
+      />
+
       </Group>
   </children>
 </component>

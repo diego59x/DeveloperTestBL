@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="carouselItem" extends="Group" >
+
+  <interface>
+    <field id="content" type="assocarray" alwaysNotify="true" onChange="onContentUpdate" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/carouselD/carouselItems/carouselItems.brs" />
+
+  <children>
+        <Group id="itemContainer">
+            <Rectangle 
+                id="background"
+            />
+            <poster 
+                id="focusImage"
+            />
+            <poster 
+                id="imageThumb"
+            />
+            <Label 
+                id="itemTitle"
+            />
+            <Label 
+                id="subtitleItem"
+            />
+            <Label 
+                id="descriptionItem"
+            />
+      </Group>
+  </children>
+</component>

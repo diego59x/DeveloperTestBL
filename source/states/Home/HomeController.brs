@@ -43,9 +43,7 @@ function GetHomeController() as object
         end sub
 
         prototype.launch = sub(data = invalid as object)
-
             m._loadcatalogCommand.execute()
-            ' m._loadDataSuccessful({})
         end sub
 
         prototype.getViewObject = function()
@@ -73,8 +71,6 @@ function GetHomeController() as object
         '////////////////
 
         prototype._loadDataSuccessful = sub(data)
-
-
             m._ownMediator.populateView(data)
             m._ownMediator.setFocus()
         end sub

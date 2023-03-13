@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="carouselD" extends="Group" >
+
+  <interface>
+    <field id="content" type="assocarray" alwaysNotify="true" onChange="onContentUpdate" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/carouselD/carouselD.brs" />
+
+  <children>
+        <Label 
+            id="carouselTitle"
+        />
+        <Group id="carouselContainer">
+        <!-- Here to append all carouselItems -->
+
+        </Group>
+  </children>
+</component>

@@ -43,6 +43,8 @@ function DataModel() as object
 
             if (req.code = 200)
                 ' Parse data
+                m._data = data.categories[0]
+                m.dispatchEvent(m.STOREFRONT_CONTENT_SUCCESS, m._data)
             else
                 m.dispatchEvent(m.STOREFRONT_CONTENT_FAILED, data.header)
             end if
