@@ -4,22 +4,38 @@
 
   <interface>
     <field id="content" type="assocarray" alwaysNotify="true" onChange="onContentUpdate" />
+    <field id="widthElement" type="int" />
   </interface>
 
   <script type="text/brightscript" uri="pkg:/components/carouselD/carouselD.brs" />
 
   <children>
         <Label 
-            id="carouselTitle"
-            font="font:MediumBoldSystemFont"
-            translation="[10,200]"
+          id="carouselTitle"
+          font="font:MediumBoldSystemFont"
+          translation="[10,200]"
         />
+        <!-- Here to append all carouselItems -->
         <Group 
           id="carouselContainer"
-          translation="[20,230]"
-          >
-        <!-- Here to append all carouselItems -->
+          translation="[0,230]"
+        />
 
-        </Group>
+        <Animation id="transRightAnimation" duration="1" repeat="false" easeFunction="linear" >
+          <Vector2DFieldInterpolator 
+            id = "transGroupRight"
+            key="[0.0, 1.0]"
+            keyValue="[ [0.0, 230.0], [0.0, 230.0] ]"
+            fieldToInterp="carouselContainer.translation" />
+        </Animation>
+
+        <Animation id="transLeftAnimation" duration="1" repeat="false" easeFunction="linear" >
+          <Vector2DFieldInterpolator 
+            id = "transGroupLeft"
+            key="[0.0, 1.0]"
+            keyValue="[ [0.0, 230.0], [0.0, 230.0] ]"
+            fieldToInterp="carouselContainer.translation" />
+        </Animation>
+
   </children>
 </component>
