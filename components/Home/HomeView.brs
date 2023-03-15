@@ -1,6 +1,10 @@
 sub init()
+    m.deviceInfo = CreateObject("roDeviceInfo")
+    m.screenHeight = m.deviceInfo.GetUIResolution().height
+
     m.container = m.top.findNode("container")
     m.carouselD = m.top.findNode("carouselD")
+    m.carouselD.translation = [20, m.screenHeight/2]
 
     m.top.observeField("focusedChild", "onFocus")
 end sub

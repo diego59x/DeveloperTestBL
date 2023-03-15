@@ -19,6 +19,7 @@
 
       <carouselD 
         id="carouselD"
+        translation="[0, 0]"
       />
 
       </Group>

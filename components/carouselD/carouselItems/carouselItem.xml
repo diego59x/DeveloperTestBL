@@ -17,29 +17,43 @@
                 height = "270"
                 color = "#000000"
             />
-            <poster 
-                id="focusImage"
-            />
+
             <!-- Images of 4x3 480, 360-->
             <poster 
                 id="imageThumb"
                 width="360"
                 height="270"
             />
+
+            <poster 
+                id="focusImage"
+                width = "720"
+                height = "270"
+                visible="false"
+            />
+            
             <Label 
                 id="itemTitle"
-                translation = "[370, 0]"
+                font="font:MediumBoldSystemFont"
+                width="340"
+                height="50"
+                wrap="true"
+                translation = "[370, 40]"
             />
             <Label 
                 id="subtitleItem"
-                translation = "[370, 50]"
+                font="font:MediumBoldSystemFont"
+                width="350"
+                height="50"
+                wrap="true"
+                translation = "[370, 100]"
             />
             <Label 
                 id="descriptionItem"
                 width="300"
                 height="90"
                 wrap="true"
-                translation = "[370, 100]"
+                translation = "[370, 140]"
             />
       </Group>
   </children>

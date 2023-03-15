@@ -4,7 +4,6 @@
 
   <interface>
     <field id="content" type="assocarray" alwaysNotify="true" onChange="onContentUpdate" />
-    <field id="widthElement" type="int" />
   </interface>
 
   <script type="text/brightscript" uri="pkg:/components/carouselD/carouselD.brs" />
@@ -13,13 +12,15 @@
         <Label 
           id="carouselTitle"
           font="font:MediumBoldSystemFont"
-          translation="[10,200]"
+          translation="[10,-50]"
         />
         <!-- Here to append all carouselItems -->
         <Group 
           id="carouselContainer"
-          translation="[0,230]"
         />
+
+        <!-- With this timer user will not be allowed to fast click -->
+        <Timer id="navigationTimer" repeat="false" duration="1" />
 
         <Animation id="transRightAnimation" duration="1" repeat="false" easeFunction="linear" >
           <Vector2DFieldInterpolator 

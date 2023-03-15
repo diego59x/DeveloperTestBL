@@ -3,12 +3,13 @@ sub init()
     m.itemTitle = m.top.findNode("itemTitle")
     m.subtitleItem = m.top.findNode("subtitleItem")
     m.descriptionItem = m.top.findNode("descriptionItem")
+    m.focusImage = m.top.findNode("focusImage")
+    m.focusImage.uri = "pkg:/images/movie_focus.png"
 
     m.itemTitle.font.size = 30
-    m.subtitleItem.font.size = 25
+    m.subtitleItem.font.size = 20
     m.descriptionItem.font.size = 20
     
-
     m.top.observeField("focusedChild", "onFocus")
 end sub
 
@@ -24,5 +25,6 @@ end sub
 
 sub onFocus()
     'Focus element, show focusImage
+    m.focusImage.visible = m.top.hasFocus()
 end sub
 
