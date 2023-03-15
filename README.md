@@ -1,7 +1,10 @@
 # DeveloperTestBL
-
+This project is a Test for the BrightLine Company, made by Diego Alvarez
 ## How to run it
-Later
+Install BrightScript Debugger Extension in your visual code, hit F5 to start the app with debugger  
+The other way is to upload the out/roku-deploy.zip to the website that shows when the IP of your roku device is set on a browser search  
+
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript
 ### Transactions flow
 Four files take action for this, TransactionService, TransactionPool, HttpsTransaction and Transaction
 1. At first a Task called Transaction is created - TransactionPool
@@ -18,7 +21,7 @@ Four files take action for this, TransactionService, TransactionPool, HttpsTrans
 10. The response from task is set to Httpstransaction object, then the callback set on step 3.1 is called - TransactionPool
 11. At this point the response is checked to errors, if fine a succes event is dispatched and returning the data and flow to the step 2 - TransactionService
 
-TransactionService: Manage the creation and response of the request and communicates with Main Thread
-TransactionPool: Manage Task events and creates it
-HttpsTransaction: Have the logic to truly make request, also this object helps to communicate along files
-Transaction: Manage all types of transactions and stablish the response
+TransactionService: Manage the creation and response of the request and communicates with Main Thread  
+TransactionPool: Manage Task events and creates it  
+HttpsTransaction: Have the logic to truly make request, also this object helps to communicate along files  
+Transaction: Manage all types of transactions and stablish the response  
