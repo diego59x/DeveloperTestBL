@@ -75,7 +75,7 @@ function GetHomeController() as object
             m._ownMediator.setFocus()
         end sub
 
-        prototype._loadDataFailed = sub()
+        prototype._loadDataFailed = sub(error as dynamic)
             print " ERROR: No Data Found "
         end sub
 
