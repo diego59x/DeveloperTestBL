@@ -3,7 +3,7 @@ function DataService() as object
         prototype = TransactionService()
 
         prototype.requestDataHomeService = function()
-            BASE_URL = "https://cdn-media.brightline.tv/recruiting/roku/testapi.json"
+            BASE_URL = ""
             requestHeaders = {}
 
             options = {
